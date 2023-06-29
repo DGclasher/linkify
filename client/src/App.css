@@ -17,7 +17,7 @@
 .inputContainer h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3.5rem;
-  color: #fff;
+  color: black;
   margin-bottom: 1.5rem;
 }
 
@@ -29,7 +29,13 @@
   display: flex;
   margin-bottom: 2rem;
   max-width: 500px;
-  width: 100%;
+  width: 400px;
+}
+
+@media(max-width: 768px){
+  .inputContainer div{
+    width: 350px;
+  }
 }
 
 .inputContainer input {
@@ -39,6 +45,8 @@
   border: none;
   outline: none;
   font-size: 1rem;
+  background-color: black;
+  color: white;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
@@ -147,7 +155,7 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  padding:2;
+  padding:1;
   color:white;
 }
 @media (max-width: 768px) {
