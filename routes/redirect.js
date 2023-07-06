@@ -7,7 +7,7 @@ router.get("/:shortId", async (req, res) => {
       { shortId: req.params.shortId },
       { $inc: { timesClicked: 1 } }
     );
-    if (coll.timesClicked > 10) {
+    if (coll.timesClicked > 5) {
       await URL.findOneAndDelete({ shortId: req.params.shortId });
       res.status(400).json({ message: "Limit exceeded" });
     }

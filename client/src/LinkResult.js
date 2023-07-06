@@ -7,7 +7,6 @@ const LinkResult = ({ inputValue }) => {
   const [copied, setCopied] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const env = process.env.REACT_APP_PROD_ENV;
   
   const fetchData = async () => {
     try {
