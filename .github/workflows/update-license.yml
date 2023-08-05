@@ -14,10 +14,10 @@ jobs:
           fetch-depth: 0
       - uses: FantasticFiasco/action-update-license-year@v3
         with:
-          token: ${{ secrets.PAT }}
+          token: ${{ secrets.GITHUB_TOKEN }}
         id: license
       - name: Merge PR
         if: steps.license.outputs.pullRequestNumber != ''
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh pr merge --merge --delete-branch ${{ steps.license.outputs.pullRequestNumber }}
