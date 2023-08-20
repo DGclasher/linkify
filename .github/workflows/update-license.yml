@@ -2,8 +2,7 @@ name: Update License for Repo
 
 on:
   schedule:
-    - cron: "0 10 */50 * *"
-  workflow_dispatch:
+    - cron: "0 3 1 1 *"
 
 jobs:
   run:
